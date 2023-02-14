@@ -1,27 +1,29 @@
 import { TransactionItem } from '../TransactionItem/TransactionItem';
 import PropTypes from 'prop-types';
-import './transaction-history.css'
+import { Table, TableHeader, HeaderElem, TableBody } from './TransactionHistory.styled.jsx';
 
-export const TransactionHistory = ({transactions}) => {
-return <table className="transaction-history">
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Amount</th>
-      <th>Currency</th>
-    </tr>
-  </thead>
-  <tbody>
-    <TransactionItem transactions={transactions}/>
-  </tbody>
-</table>
-}
+export const TransactionHistory = ({ transactions }) => {
+  return (
+    <Table>
+      <TableHeader>
+        <tr>
+          <HeaderElem>Type</HeaderElem>
+          <HeaderElem>Amount</HeaderElem>
+          <HeaderElem>Currency</HeaderElem>
+        </tr>
+      </TableHeader>
+      <TableBody>
+        <TransactionItem transactions={transactions} />
+      </TableBody>
+    </Table>
+  );
+};
 
 TransactionHistory.prototype = PropTypes.arrayOf(
-    PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        type: PropTypes.string.isRequired,
-        amount: PropTypes.string.isRequired,
-        currency: PropTypes.string.isRequired,
-    })
-)
+  PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+    amount: PropTypes.string.isRequired,
+    currency: PropTypes.string.isRequired,
+  })
+);

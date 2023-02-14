@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
-import './transaction-item.css';
+import {TableItem, BodyElem} from './TransactionItem.styled.jsx';
 
 export const TransactionItem = ({transactions}) => {
-    return transactions.map(({id,type,amount,currency}) => <tr key={id}>
-    <td>{type}</td>
-    <td>{amount}</td>
-    <td>{currency}</td>
-  </tr>)
+    return transactions.map(({id,type,amount,currency}) => <TableItem key={id}>
+    <BodyElem>{type}</BodyElem>
+    <BodyElem>{amount}</BodyElem>
+    <BodyElem>{currency}</BodyElem>
+  </TableItem>)
 }
 
 TransactionItem.prototype = PropTypes.arrayOf(

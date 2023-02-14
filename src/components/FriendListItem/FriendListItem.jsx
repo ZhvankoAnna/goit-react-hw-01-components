@@ -4,8 +4,7 @@ import { FriendItem, FriendName, Status } from './friendListItem.styled.jsx';
 export const FriendListItem = ({ friends }) => {
   return friends.map(({ avatar, name, isOnline, id }) => (
     <FriendItem key={id}>
-      <Status>{isOnline ? 'online' : 'offline'}</Status>
-      {/* <Status isOnline={isOnline}></Status> */}
+      <Status style={{backgroundColor: isOnline ? 'green' : 'red'}}></Status>
       <img className="avatar" src={avatar} alt="User avatar" width="48" />
       <FriendName>{name}</FriendName>
     </FriendItem>

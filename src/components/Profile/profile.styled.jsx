@@ -3,11 +3,11 @@ import styled from 'styled-components';
 export const Container = styled.div`
   width: 360px;
   margin: 20px auto;
-  padding-top: 36px;
+  padding-top: 48px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 36px;
   border-radius: 4px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -22,6 +22,7 @@ export const Box = styled.div`
 
 export const Avatar = styled.img`
   display: block;
+  margin-bottom: 36px;
   width: 120px;
   border-radius: 50%;
   background-color: #ffffff;
