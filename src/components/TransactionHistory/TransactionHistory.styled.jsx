@@ -27,4 +27,6 @@ export const HeaderElem = styled.th`
 export const TableBody = styled.tbody`
   width: 100%;
   border: 1px solid #f4f2f2;
+
+  background-color: #ffffff;
 `;

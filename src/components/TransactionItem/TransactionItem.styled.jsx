@@ -5,7 +5,6 @@ export const TableItem = styled.tr`
 
   :nth-child(2n) {
     width: 100%;
-
     background-color: #f4f2f2;
   }
 `;
