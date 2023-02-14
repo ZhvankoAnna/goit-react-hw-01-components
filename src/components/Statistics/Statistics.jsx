@@ -1,3 +1,4 @@
+import {getRandomHexColor} from '../../utils/getRandomColor'
 import PropTypes from 'prop-types';
 import {
   Container,
@@ -6,11 +7,7 @@ import {
   Item,
   Label,
   Percentage,
-} from './statistics.styled.jsx';
-
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-}
+} from './Statistics.styled.jsx';
 
 export const Statistics = ({ title, stats }) => {
   return (

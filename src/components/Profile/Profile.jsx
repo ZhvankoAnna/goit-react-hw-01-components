@@ -10,7 +10,7 @@ import {
   Item,
   Category,
   Quantity,
-} from './profile.styled.jsx';
+} from './Profile.styled.jsx';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (

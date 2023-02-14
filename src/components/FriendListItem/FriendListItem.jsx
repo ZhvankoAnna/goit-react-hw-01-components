@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
-import { FriendItem, FriendName, Status } from './friendListItem.styled.jsx';
+import { FriendItem, FriendName, Status } from './FriendListItem.styled.jsx';
 
 export const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
     <FriendItem>
-      <Status style={{ backgroundColor: isOnline ? 'green' : 'red' }}></Status>
+      <Status isOnline={isOnline}></Status>
       <img className="avatar" src={avatar} alt="User avatar" width="48" />
       <FriendName>{name}</FriendName>
     </FriendItem>
