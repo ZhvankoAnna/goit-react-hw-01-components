@@ -6,9 +6,11 @@ export const FriendItem = styled.li`
   align-items: center;
   justify-content: start;
   gap: 12px;
-  border-radius: 2px;
+  border-radius: 4px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+
+  background-color: #ffffff;
 
   :not(:last-child) {
     margin-bottom: 12px;

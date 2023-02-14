@@ -1,6 +1,11 @@
 import { TransactionItem } from '../TransactionItem/TransactionItem';
 import PropTypes from 'prop-types';
-import { Table, TableHeader, HeaderElem, TableBody } from './TransactionHistory.styled.jsx';
+import {
+  Table,
+  TableHeader,
+  HeaderElem,
+  TableBody,
+} from './TransactionHistory.styled.jsx';
 
 export const TransactionHistory = ({ transactions }) => {
   return (
@@ -19,11 +24,13 @@ export const TransactionHistory = ({ transactions }) => {
   );
 };
 
-TransactionHistory.prototype = PropTypes.arrayOf(
-  PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired,
-    amount: PropTypes.string.isRequired,
-    currency: PropTypes.string.isRequired,
-  })
-);
+TransactionHistory.propTypes = {
+  transactions: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+    })
+  ),
+};
