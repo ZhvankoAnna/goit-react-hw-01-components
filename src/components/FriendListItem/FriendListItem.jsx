@@ -1,13 +1,15 @@
 import PropTypes from 'prop-types';
-import './friend-list-item.css';
+import { FriendItem, FriendName, Status } from './friendListItem.styled.jsx';
 
 export const FriendListItem = ({ friends }) => {
-  return friends.map(({ avatar, name, isOnline, id }) => <li key={id} className="item">
-      <span className="status">{isOnline ? 'online' : 'offline'}</span>
+  return friends.map(({ avatar, name, isOnline, id }) => (
+    <FriendItem key={id}>
+      <Status>{isOnline ? 'online' : 'offline'}</Status>
+      {/* <Status isOnline={isOnline}></Status> */}
       <img className="avatar" src={avatar} alt="User avatar" width="48" />
-      <p className="name">{name}</p>
-    </li>
-);
+      <FriendName>{name}</FriendName>
+    </FriendItem>
+  ));
 };
 
 FriendListItem.prototype = PropTypes.arrayOf(

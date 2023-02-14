@@ -1,18 +1,20 @@
-import {FriendListItem} from '../FriendListItem/FriendListItem'
+import { FriendListItem } from '../FriendListItem/FriendListItem';
 import PropTypes from 'prop-types';
-import './friend-list.css';
+import { FriendsList } from './friendList.styled.jsx';
 
-export const FriendList = ({friends}) => {
-  return <ul className="friend-list">
-    <FriendListItem friends={friends} />
-  </ul>;
+export const FriendList = ({ friends }) => {
+  return (
+    <FriendsList>
+      <FriendListItem friends={friends} />
+    </FriendsList>
+  );
 };
 
 FriendList.prototype = PropTypes.arrayOf(
-    PropTypes.shape({
-      avatar: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      isOnline: PropTypes.bool.isRequired,
-      id: PropTypes.number.isRequired,
-    })
-  );
+  PropTypes.shape({
+    avatar: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    isOnline: PropTypes.bool.isRequired,
+    id: PropTypes.number.isRequired,
+  })
+);
